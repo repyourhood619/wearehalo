@@ -4,8 +4,9 @@ body {
 	font-family: 'Bebas Neue', cursive;
 }
 
+		
 video {
-	max-width: 100%;
+	max-width: fit-content;
 }
 
 #holding {
@@ -120,6 +121,7 @@ video {
 	
 	.videoContainer {
 		z-index: -10;
+
 	}
 	
 	@keyframes typing {
