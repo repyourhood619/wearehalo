@@ -79,7 +79,7 @@ video {
 			    padding: 11px;
 			    width: 300px;
 			    border-radius: 3px;
-			    font-family: bebas;
+			    font-family: 'Bebas Neue', cursive;
 			    font-size: 20px;
 			}
 			
@@ -95,7 +95,7 @@ video {
 			    border-top-left-radius: 0px;
 			    color: white;
 			    text-transform: uppercase;
-			    font-family: bebas;
+			    font-family: 'Bebas Neue', cursive;
 			    font-size: 20px;
 			    
 			    &:hover {
@@ -142,9 +142,10 @@ video {
 	#holding {
 	    
 	    .holdingContainer { 
+	    	margin-top: -90px;
 	    	
 	    	 .logoWrap {
-			    font-size: 56px;
+			    font-size: 50px;
 			    margin-bottom: 50px;
 			   	margin-top: -50px; 
 			   
@@ -156,6 +157,7 @@ video {
 			}
 	    	
 	    	.comingSoon {
+	    		margin-top: 70px;
 	    		
 	    		h1 {
 	    			font-size: 40px;
@@ -172,6 +174,15 @@ video {
 	    .formContainer {
 		    margin-top: 54px;
 		    margin-bottom: -90px;
+
+		    
+		    input {
+			    width: 200px!important;
+			}
+			
+			button {
+			    width: 100px!important;
+			}
 		}
     }
 	
