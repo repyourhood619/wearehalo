@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="noindex">
+	
+	<title>Creative Brand & Design Agency | Louder Than Love | Halo</title>
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="https://wearehalo.co.uk/">
+	<meta name="twitter:creator" content="@weare_halo">
+	<meta property="og:image" content="https://wearehalo.co.uk/assets/img/social-share.jpg">
+	<meta property="og:title" content="❚ ♥ ❚ Creative Brand &amp; Design Agency | Louder Than Love">
+	<meta property="og:description" content="">
+	<meta property="og:site_name" content="Halo ❚ ♥ ❚">
+	<meta property="og:url" content="https://wearehalo.co.uk/">
+	<meta property="og:type" content="website">
+	<meta property="fb:app_id" content="">
+
+	<!-- FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+	
+	<!-- CUSTOM STYLES -->
+	<link rel="stylesheet" href="/stylesheets/index.css?v=1" />
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	
+	<script>
+		var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+	    };
+
+	    TxtType.prototype.tick = function() {
+	        var i = this.loopNum % this.toRotate.length;
+	        var fullTxt = this.toRotate[i];
+
+	        if (this.isDeleting) {
+	        this.txt = fullTxt.substring(0, this.txt.length - 1);
+	        } else {
+	        this.txt = fullTxt.substring(0, this.txt.length + 1);
+	        }
+
+	        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+	        var that = this;
+	        var delta = 200 - Math.random() * 100;
+
+	        if (this.isDeleting) { delta /= 2; }
+
+	        if (!this.isDeleting && this.txt === fullTxt) {
+	        delta = this.period;
+	        this.isDeleting = true;
+	        } else if (this.isDeleting && this.txt === '') {
+	        this.isDeleting = false;
+	        this.loopNum++;
+	        delta = 500;
+	        }
+
+	        setTimeout(function() {
+	        that.tick();
+	        }, delta);
+	    };
+
+	    window.onload = function() {
+	        var elements = document.getElementsByClassName('typewrite');
+	        for (var i=0; i<elements.length; i++) {
+	            var toRotate = elements[i].getAttribute('data-type');
+	            var period = elements[i].getAttribute('data-period');
+	            if (toRotate) {
+	              new TxtType(elements[i], JSON.parse(toRotate), period);
+	            }
+	        }
+	        // INJECT CSS
+	        var css = document.createElement("style");
+	        css.type = "text/css";
+	        document.body.appendChild(css);
+	    };
+
+	</script>
+	
+</head>
+
+
+
+<div id="holding">
+	<div class="holdingContainer">
+		<div class="logoWrap">
+			<img class="logoImage" src="/images/brand.svg"> <span class="brandText">
+				<a href="" class="typewrite" data-period="2000" data-type='[ "We Are Halo", "We Are Halo", "We Are Halo", "We Are Halo" ]'>
+					<span class="wrap"></span>
+				</a>
+			</span>
+		</div>
+		<div class="comingSoon">
+			<h1>Coming soon</h1>
+			<p>This website is currently under construction. Please come back soon. But before you go, why not subscribe to our mailing list</p>
+		</div>
+		<div class="formContainer">
+			<form action="https://wearehalo.us20.list-manage.com/subscribe/post?u=ef1adad7b761018bee671bf45&amp;id=3b2a16ce2b" class="form" method="post" target="_blank"> 
+			    <label>Email Address</label> 
+			    <input type="email" name="EMAIL" placeholder="Email Address"> 
+			    <button type="submit">Send</button> 
+			    <div style="position: absolute; left: -5000px;" aria-hidden="true">
+			    <input type="text" name="b_ef1adad7b761018bee671bf45_3b2a16ce2b" tabindex="-1" value=""></div> 
+			</form>
+		</div>
+	</div>
+	<div class="privacyContainer">
+		<a href="https://wearehalo.co.uk/cookies-and-privacy/">Cookies & Privacy</a> | 
+		<a href="tel:0117 927 7841">0117 927 7841</a> | 
+		<a href="mailto:hello@wearehalo.co.uk">hello@wearehalo.co.uk</a>
+	</div>
+	<div class="videoContainer">
+		<video autoplay="" muted="" loop="" playsinline="" preload="" poster="/images/video_poster.jpg">
+			<source class="video" src="/images/home.mp4" type="video/mp4">
+		</video>
+	</div>
+</div>
+
+</html>

@@ -1,0 +1,176 @@
+body {
+	margin: 0px;
+	background: black;
+	font-family: 'Bebas Neue', cursive;
+}
+
+video {
+	max-width: 100%;
+}
+
+#holding {
+	background: rgba(0,0,0,0.3);
+	min-height: 100vh;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 100vh;
+    overflow: hidden;
+    
+    .holdingContainer {
+    	position: absolute;
+    	text-align: center;
+    	max-width: 100%;
+	
+		.logoWrap {
+		    font-size: 80px;
+		    color: white;
+		    font-family: 'Bebas Neue', cursive;
+		    
+		    .logoImage {
+		    	margin-right: 5px;
+		    }
+		    
+		    .typewrite {
+		    	text-decoration: none;
+		    	color: #fff;
+				overflow: hidden; /* Ensures the content is not revealed until the animation */
+				border-right: .15em solid white; /* The typwriter cursor */
+				white-space: nowrap; /* Keeps the content on a single line */
+				margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+				letter-spacing: .15em; /* Adjust as needed */
+				animation: 
+				typing 3.5s steps(30, end),
+				blink-caret .5s step-end infinite;
+		    	.wrap {
+				    color: white!important;
+				}
+			}
+		}
+		
+		.comingSoon {
+			h1 {
+				color: white;
+				font-size: 140px;
+				margin-top: 0px;
+				margin-bottom: 0px;
+			}
+			
+			p {
+				color: white;
+				font-size: 30px;
+				margin-top: 0px;
+				max-width: 100%;
+				width: 700px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+		
+		.formContainer {
+			label {
+		    	display: none;
+		    }
+		    
+		    input {
+			    border: none;
+			    height: 30px;
+			    padding: 11px;
+			    width: 300px;
+			    border-radius: 3px;
+			    font-family: bebas;
+			    font-size: 20px;
+			}
+			
+			button {
+			    border: solid;
+			    border-radius: 4px;
+			    height: 52px;
+			    vertical-align: bottom;
+			    width: 120px;
+			    margin-left: -10px;
+			    background: #ff0648;
+			    border-bottom-left-radius: 0px;
+			    border-top-left-radius: 0px;
+			    color: white;
+			    text-transform: uppercase;
+			    font-family: bebas;
+			    font-size: 20px;
+			    
+			    &:hover {
+			    	border: solid white;
+			    	background: #dddddd;
+			    	cursor: pointer;
+			    	color: #ff0648;
+			    }
+			}
+		}
+		
+	}
+	
+	.privacyContainer {
+	    position: absolute;
+	    bottom: 10px;
+	    color: white;
+	    
+	    a {
+	    	color: white;
+	    }
+	}
+	
+	.videoContainer {
+		z-index: -10;
+	}
+	
+	@keyframes typing {
+		from { width: 0 }
+		to { width: 100% }
+	}
+
+	/* The typewriter cursor effect */
+	@keyframes blink-caret {
+		from, to { border-color: transparent }
+		50% { border-color: white }
+	}
+	
+}
+
+@media only screen and (max-width: 700px) {
+	
+	#holding {
+	    
+	    .holdingContainer { 
+	    	
+	    	 .logoWrap {
+			    font-size: 56px;
+			    margin-bottom: 50px;
+			   	margin-top: -50px; 
+			   
+			     .logoImage {
+				    margin-right: 5px;
+				    height: 39px;
+				}
+			    
+			}
+	    	
+	    	.comingSoon {
+	    		
+	    		h1 {
+	    			font-size: 40px;
+	    		}
+	    	}
+	    }
+	    
+	    .videoContainer {
+	    	video {
+	    		max-width: fit-content;
+			}
+	    }
+	    
+	    .formContainer {
+		    margin-top: 54px;
+		    margin-bottom: -90px;
+		}
+    }
+	
+}
